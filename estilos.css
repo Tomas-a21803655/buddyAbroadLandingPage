@@ -1,0 +1,497 @@
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 186, 0, 1) 18%, rgba(255, 220, 164, 1) 100%);
+    position: fixed;
+    z-index: 10000;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+    float: left;
+    margin: 0 0 0 5%;
+}
+
+.menu {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.menu ul {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.menu ul a {
+    width: 20%;
+    height: inherit;
+    color: white;
+    display: inline-block;
+}
+
+.active {
+    background-color: #fff;
+    color: #252525;
+}
+
+.menu ul a:hover {
+    background-color: #fff;
+    color: #252525;
+}
+
+#menuToggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 910px) {
+    .menu {
+        width: 100%;
+        height: auto;
+    }
+    .menu ul {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.3s;
+        -moz-transition: max-height 0.3s;
+        -ms-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
+        transition: max-height 0.3s;
+    }
+    .menu ul a {
+        text-align: left;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(90deg, rgba(255, 186, 0, 1) 18%, rgba(255, 220, 164, 1) 100%);
+        padding: 10px 0px 10px 5%;
+    }
+    .menu-icon {
+        width: 100px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 60px;
+        color: white;
+    }
+    #menuToggle:checked~ul {
+        max-height: 450px;
+    }
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+    .active {
+        background-color: transparent;
+        color: #252525;
+    }
+}
+
+section {
+    padding-top: 40px;
+}
+
+body, html, main {
+    height: 100%;
+    margin: 0;
+}
+
+i {
+    margin-right: 5px;
+}
+
+.imageBackground {
+    background-image: url(images/homePicture.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bannerIndex {
+    padding: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+    align-items: center;
+}
+
+.bannerIndex>* {
+    color: white;
+}
+
+.bannerIndex>h1 {
+    font-size: 4rem;
+}
+
+.bannerIndex>article>p {
+    font-size: 1.5rem;
+}
+
+.bannerIndex>article>a {
+    margin-top: .75rem;
+    margin-right: 20px;
+}
+
+.storeIcons {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+/* aboutBA */
+
+.aboutBa {
+    padding: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 2%;
+    background-color: #f2f2f2;
+}
+
+.aboutBa>ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+    padding: 0;
+}
+
+.aboutBa>ul>li>p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+}
+
+.aboutBa>ul>li>div {
+    color: #feaa00;
+    font-size: 1em;
+}
+
+@media screen and (max-width: 650px) {
+    .aboutBa>ul {
+        grid-template-columns: repeat( auto-fit, minmax(100%, 1fr));
+    }
+    .aboutBa>ul>li>div {
+        color: #feaa00;
+        font-size: 0.8em;
+    }
+    .aboutBa>ul>li>p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ABOUT US */
+
+.us {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.us .aluno {
+    width: 250px;
+    margin: 5px;
+    background: #fff;
+    border-radius: 2%;
+    padding: 20px 10px;
+    margin-bottom: 40px;
+    margin-right: 12%;
+    margin-left: 12%;
+    text-align: center;
+}
+
+.us .aluno .aluno_image {
+    background: #feaa00;
+    max-width: 190px;
+    width: 100%;
+    height: 190px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.us .aluno .aluno_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.us .aluno h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin: 15px 0 0px;
+}
+
+.us .aluno span {
+    font-size: 10px;
+}
+
+.us .aluno p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* contacts */
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #feaa00;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.containerForm {
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 2%;
+    background-color: #f2f2f2;
+}
+
+.socials {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* FAQ */
+
+.perguntas {
+    padding: 48px;
+}
+
+.pergunta {
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    background-color: rgb(245, 245, 245);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    max-width: 320px;
+}
+
+.pergunta_title {
+    font-weight: normal;
+}
+
+.pergunta_resposta {
+    font-weight: 100;
+    font-size: 0.95rem;
+}
+
+.containerFAQ {
+    display: flex;
+    justify-content: center;
+}
+
+/* tutorial */
+
+.tutorial {
+    padding: 2rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 2%;
+    background-color: #f2f2f2;
+}
+
+.tutorial>ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+    padding: 0;
+}
+
+.tutorial>ul>li>p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: black;
+}
+
+.tutorial>ul>li>div {
+    text-align: center;
+}
+
+.phoneMockUp {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.phoneMockUp:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 650px) {
+    .tutorial>ul {
+        grid-template-columns: repeat( auto-fit, minmax(100%, 1fr));
+    }
+    .tutorial>ul>li>p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Avaliação */
+
+.containerReqs {
+    text-align: center;
+}
+
+.reqsTable {
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.buddyGlow {
+    color: rgb(0, 0, 0);
+    animation: colorChange 2s linear 2s infinite alternate;
+}
+
+@keyframes colorChange {
+    from {
+        color: black;
+    }
+    to {
+        color: #feaa00;
+    }
+}
+
+.nameChanging::before {
+    content: "Tourist";
+    color: #feaa00;
+    animation: nameChange 2s linear infinite alternate;
+}
+
+@keyframes nameChange {
+    from {
+        color: #feaa00;
+        content: "Tourist";
+    }
+    to {
+        color: #73ff00;
+        content: "Guide";
+    }
+}
+
+.flexImagesContainer {
+    display: flex;
+}
+
+.flexBoxPhoto {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.containerInventario {
+    overflow-x: auto;
+    text-align: center;
+}
+
+.inventarioTable {
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.containerTecnicas {
+    overflow-x: auto;
+    text-align: center;
+}
+
+.tecnicasTable {
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
+.sectionStyle {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 2%;
+    background-color: #f2f2f2;
+}
+
+.singlePageApp {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #feaa00;
+    color: white;
+    border-radius: 10px;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.videoContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
