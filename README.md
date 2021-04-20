@@ -1,1 +1,1 @@
-- Readme
+- https://buddy-abroad-landing-page.herokuapp.com/#index
